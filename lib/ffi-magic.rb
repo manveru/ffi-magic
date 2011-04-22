@@ -11,7 +11,7 @@ class Magic
   attach_function :magic_load, [:pointer, :string], :int
   attach_function :magic_file, [:pointer, :string], :string
   attach_function :magic_setflags, [:pointer, :int], :void
-  attach_function :magic_buffer, [:pointer, :string, :int], :string
+  attach_function :magic_buffer, [:pointer, :pointer, :int], :string
   attach_function :magic_check, [:pointer, :string], :int
   attach_function :magic_compile, [:pointer, :string], :int
   attach_function :magic_close, [:pointer], :void
@@ -82,7 +82,7 @@ class Magic
 
   def buffer(input)
     input.force_encoding(Encoding::BINARY)
-    magic_buffer(@cookie, input, input.bytesize.to_s)
+    magic_buffer(@cookie, input, input.bytesize)
   end
 
   def flags=(flags)

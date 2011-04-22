@@ -20,12 +20,12 @@ describe 'Magic' do
 
   should 'buffer' do
     @m.flags = Magic::NONE
-    @m.buffer(File.read(file)).should == "ASCII C++ program text"
+    @m.buffer(File.read(file)).should == "PNG image data, 100 x 67, 8-bit/color RGB, non-interlaced"
   end
 
   should 'buffer MIME' do
     @m.flags = Magic::MIME
-    @m.buffer(File.read(file)).should == "text/x-c++; charset=us-ascii"
+    @m.buffer(File.read(file)).should == "image/png; charset=binary"
   end
 
   should 'have a valid database' do
