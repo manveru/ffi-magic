@@ -1,8 +1,10 @@
 require 'ffi'
 
+require 'ffi-magic/version'
+
 class Magic
   extend FFI::Library
-  ffi_lib :magic
+  ffi_lib ['magic', 'libmagic.so.1']
 
   attach_function :magic_open,     [:int],    :pointer
   attach_function :magic_error,    [:pointer],            :string
