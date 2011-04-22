@@ -6,15 +6,15 @@ class Magic
   extend FFI::Library
   ffi_lib ['magic', 'libmagic.so.1']
 
-  attach_function :magic_open,     [:int],    :pointer
-  attach_function :magic_error,    [:pointer],            :string
-  attach_function :magic_load,     [:pointer, :string], :int
-  attach_function :magic_file,     [:pointer, :string], :string
-  attach_function :magic_setflags, [:pointer, :int],          :void
-  attach_function :magic_buffer,   [:pointer, :string, :int], :string
-  attach_function :magic_check,    [:pointer, :string], :int
-  attach_function :magic_compile,  [:pointer, :string], :int
-  attach_function :magic_close,    [:pointer], :void
+  attach_function :magic_open, [:int], :pointer
+  attach_function :magic_error, [:pointer], :string
+  attach_function :magic_load, [:pointer, :string], :int
+  attach_function :magic_file, [:pointer, :string], :string
+  attach_function :magic_setflags, [:pointer, :int], :void
+  attach_function :magic_buffer, [:pointer, :string, :int], :string
+  attach_function :magic_check, [:pointer, :string], :int
+  attach_function :magic_compile, [:pointer, :string], :int
+  attach_function :magic_close, [:pointer], :void
 
   NONE              = 0x000000
   DEBUG             = 0x000001
