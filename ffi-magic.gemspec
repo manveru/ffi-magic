@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ffi-magic}
-  s.version = "2011.04"
+  s.version = "2011.04.22"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Michael 'manveru' Fellinger"]

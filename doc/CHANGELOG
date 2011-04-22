@@ -1,3 +1,19 @@
+[faba9e5 | Fri Apr 22 03:02:49 UTC 2011] Michael Fellinger <m.fellinger@gmail.com>
+
+  * Fix bug in Magic#buffer, makes specs pass
+
+[e2e046a | Fri Apr 22 02:41:48 UTC 2011] Michael Fellinger <m.fellinger@gmail.com>
+
+  * clean up
+
+[6ccf92e | Fri Apr 22 02:41:41 UTC 2011] Michael Fellinger <m.fellinger@gmail.com>
+
+  * Point out that you can pass the flag to Magic.new
+
+[5a53006 | Fri Apr 22 02:04:14 UTC 2011] Michael Fellinger <m.fellinger@gmail.com>
+
+  * Version 2011.04
+
 [174a767 | Fri Apr 22 01:59:00 UTC 2011] Michael Fellinger <m.fellinger@gmail.com>
 
   * prepare for release
