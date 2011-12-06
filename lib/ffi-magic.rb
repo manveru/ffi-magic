@@ -80,9 +80,14 @@ class Magic
     msg
   end
 
-  def buffer(input)
-    input.force_encoding(Encoding::BINARY)
-    magic_buffer(@cookie, input, input.bytesize)
+  def buffer(string)
+    input = string.to_str
+
+    if input.respond_to?(:bytesize)
+      magic_buffer(@cookie, input, input.bytesize)
+    else
+      magic_buffer(@cookie, input, input.size)
+    end
   end
 
   def flags=(flags)
