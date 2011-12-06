@@ -1,7 +1,7 @@
 require 'bacon'
 Bacon.summary_on_exit
 
-require_relative '../lib/ffi-magic'
+require File.expand_path('../../lib/ffi-magic', __FILE__)
 
 describe 'Magic' do
   @m = Magic.new
