@@ -1,0 +1,2 @@
+rvm --install --create use 1.9.3@ffi-magic
+[[ -s .gems ]] && rvm gemset import .gems
