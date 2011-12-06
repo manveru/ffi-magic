@@ -1,7 +1,7 @@
 script: 'RUBYOPT=-rubygems rake bacon'
 before_script:
-  - "[[ -s \"$HOME/.rvm/scripts/rvm\" ]] && source \"$HOME/.rvm/scripts/rvm\""
-  - "[[ -s .gems ]] && rvm gemset import .gems"
+  - "test -s \"$HOME/.rvm/scripts/rvm\" && source \"$HOME/.rvm/scripts/rvm\""
+  - "test -s .gems && rvm gemset import .gems"
 rvm:
   - 1.8.7
   - 1.9.2
