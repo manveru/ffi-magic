@@ -1,6 +1,6 @@
 require 'ffi'
 
-require 'ffi-magic/version'
+require File.expand_path('ffi-magic/version', File.dirname(__FILE__))
 
 class Magic
   extend FFI::Library
