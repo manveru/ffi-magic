@@ -42,6 +42,8 @@ class Magic
 
   Error = Class.new(StandardError)
 
+  attr_reader :path, :flags
+
   def self.compile(path)
     cookie = magic_open(NONE)
 
@@ -99,10 +101,11 @@ class Magic
     magic_check(@cookie, path) == 0
   end
 
-  def load
+  def load(path = @path)
     unless magic_load(@cookie, path) == 0
       raise Error, "failed load: #{magic_error(@cookie)}"
     end
+    @path = path
   end
 
   def close
